@@ -1,0 +1,41 @@
+.theme-dark:root {
+	--tv-color-platform-background: #232a32;
+	--tv-color-pane-background: #232a32;
+	/* --tv-color-pane-background-secondary: rgb(249, 185, 233);
+	--tv-color-toolbar-button-background-hover: rgb(244, 143, 177);
+	--tv-color-toolbar-button-background-secondary-hover: red;
+	--tv-color-toolbar-button-background-expanded: rgb(244, 143, 177);
+	--tv-color-toolbar-button-text: rgb(136, 24, 79);
+	--tv-color-toolbar-button-text-hover: rgb(74, 20, 140);
+	--tv-color-toolbar-button-text-active: red;
+	--tv-color-toolbar-button-text-active-hover: red;
+	--tv-color-item-active-text: rgb(6, 255, 6);
+	--tv-color-toolbar-toggle-button-background-active: red;
+	--tv-color-toolbar-toggle-button-background-active-hover: magenta; */
+}
+
+/*
+* Styles for mobile view scroll gradient for toolbar
+*/
+html.theme-dark [class*="fadeRight-"] {
+    background-image: linear-gradient(
+90deg
+,rgba(19,23,34,0),#232a32);
+}
+html.theme-dark [class*="fadeLeft-"] {
+    background-image: linear-gradient(
+270deg
+,rgba(19,23,34,0),#232a32);
+}
+
+html.theme-dark [class*="fadeTop-"]{
+    background-image: linear-gradient(
+0deg
+,rgba(19,23,34,0),#232a32);
+}
+
+html.theme-dark [class*="fadeBot-"] {
+    background-image: linear-gradient(
+180deg
+,rgba(19,23,34,0),#232a32);
+}

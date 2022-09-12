@@ -1,0 +1,63 @@
+module.exports = {
+  roots: ['<rootDir>/src/__tests__'],
+  coverageThreshold: {
+    global: {
+      statements: 48,
+      branches: 34,
+      functions: 38,
+      lines: 48,
+    },
+  },
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.test.ts',
+    '!src/__*',
+    '!src/charting_library',
+    '!src/**/*.stories.tsx',
+  ],
+  coveragePathIgnorePatterns: [
+    '<rootDir>/src/__*',
+    '<rootDir>/src/charting_library',
+    '<rootDir>/src/__tests__/FormDesktop.test.tsx',
+  ],
+  coverageReporters: ['clover', 'json', 'lcov', 'text', 'html'],
+  coverageDirectory: './coverage',
+  setupFiles: ['react-app-polyfill/jsdom'],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  testMatch: [
+    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}',
+  ],
+  testEnvironment: 'jsdom',
+  testEnvironmentOptions: {},
+  transform: {
+    '^.+\\.(js|jsx|mjs|cjs|ts|tsx)$': '<rootDir>/config/jest/babelTransform.js',
+    '^.+\\.css$': '<rootDir>/config/jest/cssTransform.js',
+    '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': '<rootDir>/config/jest/fileTransform.js',
+  },
+  transformIgnorePatterns: [
+    '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$',
+    '^.+\\.module\\.(css|sass|scss)$',
+  ],
+  modulePaths: [],
+  moduleNameMapper: {
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '^app-images(.*)$': '<rootDir>/src/images/$1',
+    '^uuid': 'uuid',
+  },
+  moduleFileExtensions: [
+    'web.js',
+    'js',
+    'web.ts',
+    'ts',
+    'web.tsx',
+    'tsx',
+    'json',
+    'web.jsx',
+    'jsx',
+    'node',
+  ],
+  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
+  resetMocks: true,
+}

@@ -1,0 +1,79 @@
+.properties {
+  display: grid;
+  grid-gap: 24px;
+
+  &--cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &--cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .app--mobile & {
+    grid-gap: 16px;
+    grid-template-columns: 1fr;
+  }
+
+  &-entry {
+    &__title {
+      color: $color-element-text-light;
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.5;
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+
+      .app--mobile & {
+        font-size: 10px;
+        line-height: 1;
+      }
+    }
+
+    &__body {
+      color: $color-style-white;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.attributes {
+  display: grid;
+  grid-gap: 24px;
+
+  &-entry {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    grid-gap: 16px;
+    align-items: center;
+
+    .app--mobile & {
+      display: block;
+    }
+
+    &__title {
+      color: $color-element-text-light;
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.5;
+      display: block;
+
+      .app--mobile & {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &__body {
+      color: $color-style-white;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+}

@@ -1,0 +1,270 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 4px $color-bg-100;
+  border-radius: 8px;
+  border: 4px transparent solid;
+  opacity: 0.5;
+}
+::-webkit-scrollbar-corner {
+  opacity: 0;
+  visibility: hidden;
+}
+
+*,
+*:before,
+*:after {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  font-family: inherit;
+}
+
+style {
+  display: none !important;
+}
+
+body {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  background-color: $color-bg-80;
+  color: $color-style-white;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: transparentize($color-element-text-light, 0.5);
+  color: $color-style-white;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.loading {
+  font-size: 18px;
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+.small,
+small {
+  font-size: 12px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  speak: never;
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    * {
+      transition: all 0.25s ease;
+    }
+  }
+
+  & > :not(:first-child) {
+    margin-left: 4px;
+  }
+}
+.align-center {
+  text-align: center;
+}
+.wallet-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+kbd {
+  min-width: 28px;
+  height: 28px;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  padding: 0 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #485565 40%, #2d3642 56%);
+
+  small {
+    font-size: 9px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    border-radius: 6px;
+    background: #374250;
+    z-index: -1;
+  }
+}
+
+.simplebar {
+  &-scrollbar::before {
+    background: darken($color-bg-100, 5%);
+  }
+
+  &-offset {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    width: 100%;
+  }
+}
+
+[data-simplebar],
+[class^='simplebar-'] {
+  flex: unset;
+}
+
+[data-tip] {
+  outline: none;
+}
+
+#walletconnect-wrapper {
+  a {
+    color: #25292e;
+  }
+}
+
+.provider-menu__disconnect {
+  font-family: 'Sora', sans-serif;
+}
+
+.details {
+  background: $color-bg-70;
+  border-radius: 8px;
+  border: 1px $color-bg-70 solid;
+  transition: all 0.25s ease;
+
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &[open] {
+    border-color: $color-style-purple;
+    background: $color-bg-50;
+  }
+
+  &:not([open]) {
+    &:hover {
+      background: $color-element-btn-hover;
+    }
+  }
+
+  &__header {
+    padding: 11px 23px;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+
+    &::-webkit-details-marker,
+    &::marker {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      margin: 3px 0 0 24px;
+      width: 20px;
+      height: 20px;
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3.75 7.5 6.25 5 6.25-5' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+        center center no-repeat;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &[open] &__header {
+    &:after {
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.25 12.5L10 7.5L3.75 12.5' stroke='%239488F0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  &__body {
+    padding: 0 23px 19px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $color-element-text-light;
+  }
+
+  &__title {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6;
+    margin: 0 auto 0 0;
+    flex-basis: 80%;
+  }
+}
+
+[data-indicator] {
+  position: relative;
+
+  &:before {
+    content: attr(data-indicator);
+    position: absolute;
+    left: 32px;
+    top: -6px;
+    padding: 0 4px;
+    background: $color-style-red;
+    border-radius: 16px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+    color: $color-style-white;
+    z-index: 2;
+  }
+}
+.label__pro {
+  &:not(:hover) {
+    .fill {
+      fill: $color-style-blue;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  line-height: 1.5;
+}
+
+@mixin element-preloader($height: 100%, $width: auto, $bg: $color-bg-50, $indicator: #465160) {
+  position: relative !important;
+
+  &::after {
+    content: '' !important;
+    position: absolute;
+    left: 0 !important;
+    top: 50% !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: $width;
+    height: $height;
+    max-height: 24px;
+    transform: translateY(-50%);
+    background-color: $bg;
+    background-image: linear-gradient(
+      90deg,
+      transparentize($indicator, 1) 0%,
+      $indicator 50%,
+      transparentize($indicator, 1) 100%
+    ) !important;
+    background-size: 400px auto !important;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    visibility: visible !important;
+  }
+}
+
+@mixin element-preloader-with-animate(
+  $height: 100%,
+  $width: auto,
+  $bg: $color-bg-50,
+  $indicator: #465160
+) {
+  @include element-preloader($height, $width, $bg, $indicator);
+
+  &::after {
+    animation: element-preloader 2s ease-in-out infinite;
+  }
+}

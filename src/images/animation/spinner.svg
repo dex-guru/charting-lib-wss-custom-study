@@ -1,0 +1,21 @@
+<svg width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:hard-light">
+<ellipse cx="65" cy="49.908" rx="38.4158" ry="38.416" fill="#FF646D"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<ellipse cx="65" cy="80.092" rx="38.4158" ry="38.416" fill="#9488F0"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<circle r="38.4159" transform="matrix(0.707106 0.707108 -0.707106 0.707108 75.6718 54.3284)" fill="#FCFF77"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<circle r="38.4159" transform="matrix(0.707106 0.707108 -0.707106 0.707108 54.3282 75.6716)" fill="#6046FF"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<ellipse rx="38.416" ry="38.4158" transform="matrix(0.258818 -0.965926 0.965926 0.25882 49.5077 61.0939)" fill="#22D59F"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<ellipse rx="38.416" ry="38.4158" transform="matrix(0.258818 -0.965926 0.965926 0.25882 78.6631 68.9061)" fill="#88EAF0"/>
+</g>
+<ellipse cx="65" cy="66.372" rx="38.4158" ry="38.416" fill="#2C343E"/>
+</svg>

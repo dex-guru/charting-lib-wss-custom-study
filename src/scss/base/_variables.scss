@@ -1,0 +1,141 @@
+$mobile-threshold: 1025px;
+$laptop-threshold: 1560px;
+
+/* Color Schema */
+
+$white: #ffffff;
+$purple: #9488f0;
+$orange: #ff8a1f;
+$green: #46d7ab;
+$red: #ff646d;
+$light-red: #ff8c93;
+$grey: #7b7f84;
+$light-grey: #a3a3a3;
+$light-green: #12b886;
+$lighter-green: #3aeab5;
+
+$number: #545c66;
+$disabled-grey: #545c66;
+
+$color-phrase: #2e3740;
+$color-line: #2d3642;
+$color-sidebar: #6d7986;
+
+$bg-primary: #1e242c;
+$bg-primary-hover: #465160;
+$bg-rank: #181d23;
+$bg-website-links: #29313a;
+
+$bg-button-color: #2c343e;
+$bg-button-active: #9488f0;
+$bg-button-active-hover: #afa5fb;
+$bg-modal-button-hover: #374250;
+
+$bg-item-base: #343d48;
+$bg-item-selected: #9488f0;
+$bg-mobile-buy-sell-modal: #232a32;
+
+$bg-button-date-picker: rgba(148, 136, 240, 0.1);
+
+$gradient-graph: linear-gradient(0deg, #5771cd -14.69%, rgba(169, 18, 163, 0) 118.88%);
+$gradient-rainbow: linear-gradient(77.45deg, #9488f0 19.97%, #e967c4 55.52%, #82cf8a 89.58%);
+
+$chart-bg-grad-ligh-blue: #0094ff;
+$chart-bg-grad-blue: #063dff;
+$chart-bg-grad-red: #ff00c7;
+$chart-bg-grad-green: #65ff06;
+$chart-bg-grad-dark-green: #3f8b74;
+$chart-bg-grad-purple: #8c7dff;
+
+$chart-bg-category-other: #53ffe0;
+
+/* MAIN STYLE COLORS */
+$color-style-white: #ffffff;
+$color-style-grey: #465160;
+
+$color-style-blue: #6046ff;
+$color-style-blue-light: #46a6ff;
+$color-hover-blue-light: #74bcff;
+
+$color-style-purple: #9488f0;
+$color-hover-purple: #afa5fb;
+
+$color-style-green: #12b886;
+$color-style-green-light: #22d49f;
+$color-hover-green-light: #3aeab5;
+$color-style-green-light-opacity-20: rgba(34, 212, 159, 0.2);
+
+$color-style-red: #ff646d;
+$color-hover-red: #ff8c93;
+$color-style-red-opacity-20: rgba(255, 100, 109, 0.2);
+
+/* BACKGROUND COLORS */
+$color-bg-100: #181d23;
+$color-bg-90: #1e242c;
+$color-bg-80: #232a32;
+$color-bg-70: #29313a;
+$color-bg-60: #2d3642;
+$color-bg-50: #343d48;
+
+/* ELEMENT COLORS */
+$color-element-text: #545c66;
+$color-element-text-light: #6d7986;
+$color-element-btn-hover: #374250;
+$color-element-input: #1f262f;
+
+/* Z-INDEX */
+$z-index-animation-man: 100000;
+$z-index-animation-rainbow: 99999;
+$z-index-overlay: 10002;
+$z-index-chart-tooltip: 1000;
+$z-index-animation-wrong-network: 500;
+$z-index-network-fee-mobile: 101;
+$z-index-bn-notify-notifications: 99;
+$z-index-overlay-search: 11;
+$z-index-buy-sell-bottom: 10;
+$z-index-header-logo: 13;
+$z-index-overlay-modal: 12;
+$z-index-header: 12;
+$z-index-search: 12;
+$z-index-provider-menu-mobile: 11;
+$z-index-close-mobile-screen: 5;
+$z-index-close-modal: 5;
+$z-index-select-buttons: 5;
+$z-index-drop-select: 4;
+$z-index-chart-animation-man: 3;
+$z-index-modal-rc-slider-handle: 3;
+$z-index-sidebar-tooltiptext: 3;
+$z-index-sidebar-hide-button: 2;
+$z-index-sidebar-open-button: 2;
+$z-index-switch-currency-button: 2;
+$z-index-chart-animation-rainbow: 2;
+$z-index-tab-list: 2;
+$z-index-dropdown-search: 2;
+$z-index-modal-verify-footer: 2;
+$z-index-modal-rc-slider-track: 2;
+$z-index-modal-rc-slider-item: 2;
+$z-index-up-down-button: 1;
+$z-index-tab-title: 1;
+$z-index-settings-percent-inputs: 1;
+$z-index-wallet-data: 1;
+$z-index-slide-to-trade-button: 0;
+$z-index-slide-button: 1;
+$z-index-slide-button-arrow: 1;
+$z-index-dropdown-search-wrapper: 1;
+$z-index-dropdown-options: 1;
+$z-index-chart-loader: 1;
+$z-index-modal-verify-cost-drop: 0;
+$z-index-settings-percent-inputs-before: 0;
+$z-index-dropdown-search-before: -1;
+$z-index-modal-verify-before: -1;
+$z-index-search-open: -1;
+$z-index-filter: 5;
+$z-index-filter-button: 6;
+$z-index-close-full-sidebar: 100001;
+$z-index-mushroom: 3;
+$z-index-plan-banner: 2;
+
+/* Fonts */
+
+$sora-font-family: 'Sora', sans-serif;
+$ibm-font-family: 'IBM Plex Sans Condensed', sans-serif;

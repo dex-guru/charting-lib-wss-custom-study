@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 32C24.8368 32 32 24.8368 32 16C32 7.1632 24.8368 0 16 0C7.1632 0 0 7.1632 0 16C0 24.8368 7.1632 32 16 32Z" fill="#3B2669"/>
+<g clip-path="url(.clip0-polygon-explorer)">
+<path d="M21.7182 22.8571V12.4829L24.6857 10.8128V21.1948L21.7182 22.8571Z" fill="white"/>
+<path d="M9.83253 22.8571V15.823L12.8 17.493V21.1948L9.83253 22.8571Z" fill="white"/>
+<path d="M21.7182 22.8571V12.4829L18.7429 10.8128V21.1948L21.7182 22.8571Z" fill="white"/>
+<path d="M18.7429 10.8129L21.7182 12.4829L24.6857 10.8129L21.7182 9.14286L18.7429 10.8129Z" fill="white"/>
+<path d="M18.7429 14.153L15.7754 15.823L6.85715 10.8129L9.8325 9.14286L18.7429 14.153Z" fill="white"/>
+<path d="M9.8325 22.8571V15.8229L15.7754 19.1553V15.8229L6.85715 10.8128V21.1871L9.8325 22.8571Z" fill="white"/>
+<path d="M15.7753 15.823L18.7428 14.1529V17.493L15.7753 19.1553V15.823Z" fill="white"/>
+</g>
+<defs>
+<clipPath class="clip0-polygon-explorer">
+<rect width="17.8286" height="13.7143" fill="white" transform="translate(6.85715 9.14286)"/>
+</clipPath>
+</defs>
+</svg>

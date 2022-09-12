@@ -1,0 +1,347 @@
+.app {
+  &-nav {
+    display: flex;
+    gap: 10px;
+    flex-flow: column;
+
+    &__links {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      gap: 4px;
+
+      &--extra {
+        margin-top: auto;
+        position: relative;
+      }
+
+      &-onboarding {
+        position: absolute;
+        left: 0;
+        top: 48px;
+        right: 0;
+        bottom: 48px;
+        pointer-events: none;
+      }
+    }
+
+    &__body,
+    &__wrapper {
+      flex: 1 0 0;
+      display: flex;
+      flex-flow: column;
+      gap: 24px;
+    }
+
+    &__body {
+      overflow: hidden;
+
+      & > [data-simplebar] {
+        margin-right: -8px;
+        padding-right: 8px;
+        height: 100%;
+      }
+
+      .simplebar {
+        &-scrollbar::before {
+          background: $color-bg-50;
+        }
+
+        &-track {
+          visibility: hidden !important ;
+        }
+
+        &-content {
+          min-height: 100%;
+          display: flex;
+          flex-flow: column;
+        }
+      }
+    }
+  }
+
+  &-drawer {
+    padding: 12px 16px;
+    background: $color-bg-80;
+    border-radius: 0 16px 16px 0;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    width: 390px;
+    transform: translateX(-100%);
+    transition: all 0.25s ease;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-element-text-light;
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    &__header {
+      margin-bottom: 12px;
+      min-height: 32px;
+      display: flex;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+
+    &__title {
+      font-family: 'Sora', sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-right: auto;
+    }
+
+    &__version {
+      margin-left: auto;
+      color: $color-element-text-light;
+      font-size: 11px;
+      line-height: 18px;
+    }
+
+    &__body {
+      flex: 1 0 0;
+      position: relative;
+
+      & > [data-simplebar] {
+        position: absolute;
+        left: -16px;
+        right: -16px;
+        top: 0;
+        bottom: 0;
+        padding: 0 16px;
+      }
+    }
+
+    &__close {
+      margin-left: 20px;
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    background: $color-bg-80;
+    border: 0;
+    border-radius: 16px;
+    transition: all 0.25s ease;
+    position: relative;
+    cursor: pointer;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    &[target='_blank'] {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 12px;
+        height: 12px;
+        background: url("data:image/svg+xml,%3Csvg width='12' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.854 4.854a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 1 0 .708.708l3-3Z' fill='%239488F0'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.5 11h4A1.5 1.5 0 0 0 8 9.5v-1a.5.5 0 0 1 .5-.5h1A1.5 1.5 0 0 0 11 6.5v-4A1.5 1.5 0 0 0 9.5 1h-4A1.5 1.5 0 0 0 4 2.5v1a.5.5 0 0 1-.5.5h-1A1.5 1.5 0 0 0 1 5.5v4A1.5 1.5 0 0 0 2.5 11Zm4-1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1A1.5 1.5 0 0 0 5 3.5v-1a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1A1.5 1.5 0 0 0 7 8.5v1a.5.5 0 0 1-.5.5Z' fill='%239488F0'/%3E%3C/svg%3E")
+          center center no-repeat;
+      }
+    }
+
+    &:hover {
+      background-color: $color-element-btn-hover;
+    }
+
+    &.active {
+      background-color: $color-element-btn-hover;
+    }
+
+    &--main {
+      border-radius: 50%;
+
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      &.active {
+        background: $color-bg-80;
+      }
+    }
+
+    &--settings,
+    &--sound {
+      background: none;
+
+      .icon {
+        width: 32px;
+        height: 32px;
+
+        path {
+          stroke: $color-style-purple;
+        }
+      }
+
+      &:hover,
+      &.active {
+        background: none;
+
+        .icon path {
+          stroke: $color-hover-purple;
+        }
+      }
+    }
+
+    &--sound {
+      &.on {
+        .wave {
+          transform-origin: center center;
+        }
+
+        &:hover {
+          .icon-sound {
+            @keyframes soundWaveMoveSmall {
+              0% {
+                opacity: 0;
+                transform: translateX(-5px) scale(0.5);
+              }
+              50% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+              }
+              100% {
+                opacity: 1;
+              }
+            }
+
+            @keyframes soundWaveMoveBig {
+              0% {
+                opacity: 0;
+                transform: translateX(-5px) scale(0.5);
+              }
+              50% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+              }
+              100% {
+                opacity: 0;
+                transform: translateX(2px) scale(1.2);
+              }
+            }
+
+            .wave--big {
+              animation: soundWaveMoveBig 1s infinite 0.25s;
+            }
+
+            .wave--small {
+              animation: soundWaveMoveSmall 1s infinite;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-pane {
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+    min-height: 100%;
+
+    &__body {
+      flex: 1 0 auto;
+    }
+
+    &-header {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 8px 16px;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__subtitle {
+      flex: 0 0 100%;
+      color: $color-element-text-light;
+      font: normal 300 12px/16px 'Sora', sans-serif;
+    }
+
+    &__wallet {
+      margin-left: auto;
+    }
+  }
+}
+
+.desktop-app {
+  position: relative;
+  min-height: 100vh;
+  min-width: $mobile-threshold;
+  background: $color-bg-80;
+  padding-left: 56px;
+  display: flex;
+
+  &__nav {
+    background: $color-bg-100;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 56px;
+  }
+
+  &__body {
+    flex: 1 0 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__drawer {
+    position: fixed;
+    left: 56px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.25s ease;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  &__pane {
+    padding: 8px;
+    height: 100%;
+    width: 100%;
+  }
+}

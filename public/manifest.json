@@ -1,0 +1,15 @@
+{
+    "name": "DexGuru",
+    "short_name": "DexGuru",
+    "description": "DexGuru gives you unparalleled coverage of on-chain markets integrated into one place and delivered in real-time.",
+    "iconPath": "logo-circle.png",
+    "providedBy": {"name": "DexGuru", "url": "https://dex.guru"},
+    "icons": [
+        { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+      ],
+    "theme_color": "#181d23",
+    "background_color": "#181d23",
+    "start_url": "/?source=pwa",
+    "display": "standalone"
+}
